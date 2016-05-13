@@ -10,9 +10,9 @@ Boat.create([{name: "Wayfarer", containers: "10", location: "LA"}])
 
 
 
-Job.create([{containers:"5", cargo:"", origin:"Boston", destination:"London", cost: "1100"}])
-Job.create([{containers:"10", cargo:"", origin:"", destination:"", cost: "5000"}])
-Job.create([{containers:"3", cargo:"", origin:"", destination:"", cost: "2000"}])
+Job.create([{containers:"5", cargo:"Faker::Lorem.characters(100)", origin:"Boston", destination:"London", cost: "1100"}])
+Job.create([{containers:"10", cargo:"Faker::Lorem.characters(100)", origin:"", destination:"", cost: "5000"}])
+Job.create([{containers:"3", cargo:"Faker::Lorem.characters(100)", origin:"", destination:"", cost: "2000"}])
 
 
 
