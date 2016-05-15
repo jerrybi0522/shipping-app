@@ -9,7 +9,7 @@ class JobsController < ApplicationController
   def create
     @job = Job.new(job_params)
     @job.save
-    redirect_to boat_path(@boat)
+    redirect_to boat_path(@job.boat)
   end
 
   def edit

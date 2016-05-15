@@ -41,7 +41,7 @@
 	<% end %>
 </div>
 
-<% if @boat.jobs %>
+
 	<% @jobs.reverse.each do |job| %>
 		<%= job.name %>
 		# of Containers Required: <%= job.containers %>
@@ -51,4 +51,4 @@
 		Cost: <%= job.cost %>
 		<%= link_to "Edit", edit_job_path(@job) %> | <%= link_to "Delete Job", job_path(@job), method: :delete %>
 	<% end %>
-<% end %>
+

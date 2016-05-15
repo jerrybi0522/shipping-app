@@ -2,8 +2,9 @@ class BoatsController < ApplicationController
   def index
     # session.clear
 
-    @me = current_user.id
-    @boat = Boat.where(user_id: @me)
+    # @me = current_user.id
+    # @boat = Boat.where(user_id: @me)
+    @boats = Boat.all
   end
 
   def new

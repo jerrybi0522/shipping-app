@@ -6,14 +6,13 @@
 		<%= f.text_field :containers %>
 		<%= f.label :location %>
 		<%= f.text_field :location %>
-		<% @me = current_user.id %>
-		<%= f.hidden_field :user_id, value: @me %>
 		<%= f.file_field :avatar %>
+		<%= f.hidden_field :user_id, value: current_user.id %>
 		<%= f.submit "Add boat" %>
 	<%end%>
 </div>
 
-<% @boat.each do |boat| %>
+<% @boats.each do |boat| %>
 	<div class="boat-list">
 	<%= link_to boat.name,  boat_path(boat) %>
 	<br> 
