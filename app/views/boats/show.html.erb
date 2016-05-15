@@ -14,6 +14,7 @@
 	</div>
 </div>
 <br>
+
 <div class="job-create">
 	<%= form_for Job.new do |f| %>
 		<%= f.label :name %><br>
@@ -39,7 +40,6 @@
 	  <%= f.submit %><br>
 	<% end %>
 </div>
-
 
 <% if @boat.jobs %>
 	<% @jobs.reverse.each do |job| %>

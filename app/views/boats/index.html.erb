@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+<%= form_for Boat.new do |f| %>
+	<%= f.label :name %><br>
+	<%= f.text_field :name %><br>
+	<%= f.label :containers %><br>
+	<%= f.text_field :containers %><br>
+	<%= f.label :location %><br>
+	<%= f.text_field :location %><br>
+
+<% @me = current_user.id %>
+	<%= f.hidden_field :user_id, value: @me %>
+	<%= f.submit "Add boat" %>
+<%end%>
+
+=======
 <div class="boat-create">	
 	<%= form_for Boat.new, remote: true do |f| %>
 		<%= f.label :name %>
@@ -12,6 +27,7 @@
 		<%= f.submit "Add boat" %>
 	<%end%>
 </div>
+>>>>>>> 9664f64ae8bfc9a4fb3fe6a6116ab2ba39bf2e35
 
 <% @boat.each do |boat| %>
 	<div class="boat-list">
