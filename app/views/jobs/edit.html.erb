@@ -1,2 +1,21 @@
-<h1>Jobs#edit</h1>
-<p>Find me in app/views/jobs/edit.html.erb</p>
+<%= form_for @job do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+
+	<%= f.label :containers, "# of Containers Required" %>
+	<%= f.text_field :containers %>
+
+	<%= f.label :origin %>
+	<%= f.text_field :origin %>
+
+	<%= f.label :cargo %>
+	<%= f.text_area :cargo %>
+
+	<%= f.label :destination %>
+	<%= f.text_field :destination %>
+
+	<%= f.label :cost %>
+	<%= f.text_field :cost %>
+
+  <%= f.submit :update %>
+<% end %>

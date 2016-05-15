@@ -8,7 +8,7 @@ class JobsController < ApplicationController
   def create
     @job = Job.new(job_params)
     @job.save
-    redirect_to boat_path
+    redirect_to boat_path(@boat)
   end
 
   def edit
@@ -18,13 +18,13 @@ class JobsController < ApplicationController
   def update
     @job = Job.find(params[:id])
     @job.update(job_params)
-    redirect_to boat_path
+    redirect_to boat_path(@boat)
   end
 
   def destroy
     @job = Job.find(params[:id])
     @job.destroy
-    redirect_to boat_path
+    redirect_to boat_path(@boat)
   end
 
   def show
@@ -34,6 +34,6 @@ class JobsController < ApplicationController
   private
 
   def job_params
-    params.require(:job).permit(:boat_id, :name, :containers, :cargo, :origin, :cost, :destination)
+    params.require(:job).permit(:boat_id, :user_id, :name, :containers, :cargo, :origin, :cost, :destination)
   end
 end

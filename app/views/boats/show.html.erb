@@ -1,7 +1,7 @@
 <h1> Name: <%= @boat.name %> </h1> 
 <br>
 
-<h1>Conainers: <%= @boat.containers %> </h1> 
+<h1>Containers: <%= @boat.containers %> </h1> 
 <h1>Location <%= @boat.location %> </h1> 
 <br>
 <%= link_to "go back", boats_path%> 
@@ -34,4 +34,14 @@
   <%= f.submit %>
 <% end %>
 
-
+<% if @boat.jobs %>
+	<% @jobs.reverse.each do |job| %>
+		<%= job.name %>
+		# of Containers Required: <%= job.containers %>
+		Origin: <%= job.origin %>
+		Cargo: <%= job.cargo %>
+		Destination: <%= job.destination %>
+		Cost: <%= job.cost %>
+		<%= link_to "Edit", edit_job_path(@job) %> | <%= link_to "Delete Job", job_path(@job), method: :delete %>
+	<% end %>
+<% end %>
